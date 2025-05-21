@@ -7,7 +7,7 @@ import Image from "next/image"
 // Constants
 const SOL_TOKEN_ADDRESS = "So11111111111111111111111111111111111111112"
 const ICM_TOKEN_ADDRESS = "ICM_TOKEN_ADDRESS" // Address hidden from frontend
-const BIRDEYE_SWAP_URL = `https://birdeye.so/token/${ICM_TOKEN_ADDRESS}?chain=solana`
+const BIRDEYE_SWAP_URL = `https://birdeye.so/token/6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp?chain=solana`
 const FIXED_PRICE = 1 / 33410832.26 // Set the fixed exchange rate as requested
 
 export default function TradingWidget() {
