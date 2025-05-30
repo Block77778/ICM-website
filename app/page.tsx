@@ -381,7 +381,7 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
                 <a
-                  href="https://m.facebook.com/profile.php?id=61576105692571"
+                  href="https://www.facebook.com/share/18puXHchzU/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-gradient-to-r from-[#ADFF2F] to-[#4ECDC4] rounded-lg font-bold text-black hover:opacity-90 transition-all"
@@ -405,7 +405,7 @@ export default function Home() {
                   Join Telegram Group
                 </a>
                 <a
-                  href="https://x.com/icmcrypto_?s=21"
+                  href="https://x.com/icmcrypto__?s=21"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-transparent border-2 border-[#56CCF2] rounded-lg font-bold hover:bg-[#56CCF2]/10 transition-all"
