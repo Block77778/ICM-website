@@ -389,12 +389,12 @@ export default function Home() {
                   Facebook
                 </a>
                 <a
-                  href="https://instagram.com/icemelon2025"
+                  href="https://www.geckoterminal.com/solana/pools/6ob9P9peWK3gC1Vm26Amo5364SyvHre2PLtMt2m1XWds"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-gradient-to-r from-[#ADFF2F] to-[#4ECDC4] rounded-lg font-bold text-black hover:opacity-90 transition-all"
                 >
-                  Instagram @icemelon2025
+                  Gecko Terminal
                 </a>
                 <a
                   href="https://t.me/+r5F9-F-BvmFjNjY0"
