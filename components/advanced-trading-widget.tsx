@@ -6,7 +6,7 @@ import Image from "next/image"
 
 // Constants
 const SOL_TOKEN_ADDRESS = "So11111111111111111111111111111111111111112"
-const ICM_TOKEN_ADDRESS = "ICM_TOKEN_ADDRESS" // Address hidden from frontend
+const ICM_TOKEN_ADDRESS = "6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp" // Address hidden from frontend
 const BIRDEYE_SWAP_URL = `https://birdeye.so/token/6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp?chain=solana`
 const FIXED_PRICE = 1 / 33410832.26 // Set the fixed exchange rate as requested
 
@@ -151,7 +151,7 @@ export default function TradingWidget() {
 
     // If swapping from ICM to SOL, reverse the from/to parameters
     if (fromToken === "ICM") {
-      url = `https://birdeye.so/swap?chain=solana&from=${ICM_TOKEN_ADDRESS}&to=So11111111111111111111111111111111111111112`
+      url = `https://birdeye.so/token/6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp?chain=solana`
       if (fromAmount) {
         url += `&amount=${fromAmount}`
       }
@@ -340,7 +340,7 @@ export default function TradingWidget() {
       {/* Additional links */}
       <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs">
         <a
-          href={`https://birdeye.so/token/${ICM_TOKEN_ADDRESS}?chain=solana`}
+          href={`https://birdeye.so/token/6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp?chain=solana`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition-colors flex items-center"
@@ -348,7 +348,7 @@ export default function TradingWidget() {
           Token Info <ExternalLink className="ml-1" size={10} />
         </a>
         <a
-          href={`https://solscan.io/token/${ICM_TOKEN_ADDRESS}`}
+          href={`https://solscan.io/token/6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition-colors flex items-center"
@@ -356,7 +356,7 @@ export default function TradingWidget() {
           Solscan <ExternalLink className="ml-1" size={10} />
         </a>
         <a
-          href={`https://raydium.io/swap/?inputMint=sol&outputMint=${ICM_TOKEN_ADDRESS}`}
+          href={`https://raydium.io/swap/?inputMint=sol&outputMint=6C9vpQRnestpLjc4dk6d7sFJJFiUsEhDYJVn1houiJyp`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition-colors flex items-center"
