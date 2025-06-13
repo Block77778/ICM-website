@@ -44,13 +44,13 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="https://x.com/icmcrypto_?s=21"
+              href="https://x.com/icmcrypto__?s=21"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-[#56CCF2] hover:text-[#4ECDC4] transition-colors"
             >
               <Twitter className="mr-2" size={18} />
-              @icmcrypto_ <ExternalLink className="ml-2" size={14} />
+              @IcmCrypto__ <ExternalLink className="ml-2" size={14} />
             </a>
           </div>
         </div>
