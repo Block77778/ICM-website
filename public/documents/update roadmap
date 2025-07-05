@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IceMelon (ICM) – Official Roadmap 2025–2028</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4fdf8;
+      color: #1b1b1b;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #007c58;
+    }
+    h1 {
+      border-bottom: 3px solid #8ae2c1;
+      padding-bottom: 0.5rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    .divider {
+      border-top: 1px solid #ccc;
+      margin: 2rem 0;
+    }
+    .links a {
+      color: #007c58;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧭 IceMelon (ICM) – Official Roadmap 2025–2028</h1>
+
+  <section>
+    <h2>🔹 Vision</h2>
+    <p>
+      IceMelon (ICM) is a cryptocurrency born from the aspiration to change how the world consumes energy.
+      The project’s core vision is to reduce global dependence on oil and natural gas, and to empower the use of renewable energy sources: solar, wind, water, and other ecological resources.
+    </p>
+    <p>
+      By building a smart digital economy connected to clean energy, IceMelon aims to create real change — not just in the profits of token holders, but for the future of humanity as a whole.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>🔹 Setup and Launch Phase – Q2 2025</h2>
+    <ul>
+      <li>Official project launch: May 2025</li>
+      <li>Token issuance (ICM): Launched on the Solana network</li>
+      <li>Trading begins: Token available for trading on decentralized platforms:
+        <ul>
+          <li>Birdeye</li>
+          <li>GeckoTerminal</li>
+          <li>Other decentralized platforms</li>
+        </ul>
+      </li>
+      <li>Building digital infrastructure:
+        <ul>
+          <li>Official website</li>
+          <li>Logo and brand identity</li>
+          <li>Social media channels: Telegram, Twitter (X), Instagram</li>
+        </ul>
+      </li>
+      <li>Initial community establishment</li>
+      <li>Marketing campaigns</li>
+      <li>Partnerships with investors</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔹 Growth Phase – Q3–Q4 2025</h2>
+    <ul>
+      <li>Expanding the global community</li>
+      <li>Increasing trading volume and liquidity</li>
+      <li>Collaborations with green projects</li>
+      <li>Purpose-driven community</li>
+      <li>Multilingual advertising campaigns</li>
+      <li>Global media exposure</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔹 Year 2026 – Connecting to the Real World</h2>
+    <ul>
+      <li>Establishing the first solar farm</li>
+      <li>Direct connection between token and electricity</li>
+      <li>Development of digital management system</li>
+      <li>Preparation for entry into centralized exchanges (CEX)</li>
+      <li>Deepening partnerships with green companies</li>
+      <li>Connections with governments and environmental orgs</li>
+      <li>Gradual increase in market capitalization</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔹 Years 2027–2028 – Vision Realization and Global Expansion</h2>
+    <ul>
+      <li>At least 3 operational solar farms worldwide</li>
+      <li>Smart digital system with real-time data</li>
+      <li>Global trading without restrictions</li>
+      <li>Documented energy-token value link</li>
+      <li>Leading humanity toward a green future</li>
+      <li>Philosophical and conscious shift</li>
+      <li>Protecting life and the planet</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🟢 Summary</h2>
+    <p>
+      IceMelon is much more than a token — it is a mindset-changing project that connects the worlds of crypto and ecology in an unprecedented way.
+      The goal is not only to generate profit but to build a future where the energy powering the world is clean, natural, and carries deep human and environmental significance.
+    </p>
+    <p>The journey has already begun. Join us.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="links">
+    <h2>🌐 Official IceMelon (ICM) Links</h2>
+    <ul>
+      <li>Website: <a href="https://icm-cryptocurrency.com" target="_blank">icm-cryptocurrency.com</a></li>
+      <li>Email: <a href="mailto:icmcryptocurrency@gmail.com">icmcryptocurrency@gmail.com</a></li>
+      <li>Telegram: <a href="https://t.me/icmcrypto" target="_blank">t.me/icmcrypto</a></li>
+      <li>Instagram: <a href="https://instagram.com/icemelon2025" target="_blank">instagram.com/icemelon2025</a></li>
+      <li>Twitter (X): <a href="https://x.com/icmcrypto__" target="_blank">x.com/icmcrypto__</a></li>
+      <li>Threads: <a href="https://threads.com/@icemelon2025" target="_blank">threads.com/@icemelon2025</a></li>
+      <li>Facebook: <a href="https://facebook.com/share/18puXHchzU" target="_blank">facebook.com/share/18puXHchzU</a></li>
+      <li>YouTube: <a href="https://youtube.com/@Icemelon2025" target="_blank">youtube.com/@Icemelon2025</a></li>
+      <li>Medium: <a href="https://medium.com/@mwcsqgx" target="_blank">medium.com/@mwcsqgx</a></li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    © IceMelon Cryptocurrency Project – All Rights Reserved
+  </div>
+
+</body>
+</html>
