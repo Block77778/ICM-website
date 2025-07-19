@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Trading Section - Moved up as requested */}
+        {/* Trading Section */}
         <section ref={tradeRef} id="trade" className="container mx-auto px-4 py-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             <span className="bg-gradient-to-r from-[#4ECDC4] via-[#56CCF2] to-[#2F80ED] bg-clip-text text-transparent">
@@ -379,7 +379,7 @@ export default function Home() {
           <OfficialLinks />
         </section>
 
-        {/* Community Section */}
+        {/* Community Section - Simplified to avoid duplicate links */}
         <section ref={communityRef} id="community" className="relative py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#2F80ED]/10 to-[#56CCF2]/10 backdrop-blur-sm z-0"></div>
           <div className="container mx-auto px-4 relative z-10">
@@ -389,42 +389,8 @@ export default function Home() {
               <p className="text-xl mb-10 text-gray-300">
                 Be part of the green crypto revolution and help build a sustainable blockchain future.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
-                <a
-                  href="https://facebook.com/share/18puXHchzU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-gradient-to-r from-[#ADFF2F] to-[#4ECDC4] rounded-lg font-bold text-black hover:opacity-90 transition-all"
-                >
-                  Facebook
-                </a>
-                <a
-                  href="https://www.geckoterminal.com/solana/pools/6ob9P9peWK3gC1Vm26Amo5364SyvHre2PLtMt2m1XWds"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-gradient-to-r from-[#ADFF2F] to-[#4ECDC4] rounded-lg font-bold text-black hover:opacity-90 transition-all"
-                >
-                  Gecko Terminal
-                </a>
-                <a
-                  href="https://t.me/IcemelonOfficial"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-transparent border-2 border-[#56CCF2] rounded-lg font-bold hover:bg-[#56CCF2]/10 transition-all"
-                >
-                  Join Telegram Group
-                </a>
-                <a
-                  href="https://x.com/icmcrypto__"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-transparent border-2 border-[#56CCF2] rounded-lg font-bold hover:bg-[#56CCF2]/10 transition-all"
-                >
-                  Follow X
-                </a>
-              </div>
 
-              <div className="mt-16 bg-black/30 backdrop-blur-md rounded-xl border border-[#2F80ED]/20 p-6 md:p-8">
+              <div className="bg-black/30 backdrop-blur-md rounded-xl border border-[#2F80ED]/20 p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-6 text-[#56CCF2]">Community Benefits</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                   <div className="flex">
@@ -463,6 +429,19 @@ export default function Home() {
                       <p className="text-gray-300">Help shape the green crypto revolution, together</p>
                     </div>
                   </div>
+                </div>
+
+                <div className="mt-8 p-4 bg-gradient-to-r from-[#2F80ED]/10 to-[#56CCF2]/10 rounded-lg">
+                  <p className="text-gray-300 text-center">
+                    Find all our official social media links and community channels in the{" "}
+                    <button
+                      onClick={() => scrollToSection(linksRef)}
+                      className="text-[#56CCF2] hover:text-[#4ECDC4] underline font-medium"
+                    >
+                      Official Links
+                    </button>{" "}
+                    section above.
+                  </p>
                 </div>
               </div>
             </div>
