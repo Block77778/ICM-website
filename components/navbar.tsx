@@ -12,6 +12,7 @@ interface NavbarProps {
     trade: () => void
     community: () => void
     contact: () => void
+    links: () => void
   }
 }
 
@@ -34,6 +35,8 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
       onNavigate.community()
     } else if (section === "contact") {
       onNavigate.contact()
+    } else if (section === "links") {
+      onNavigate.links()
     }
   }
 
@@ -59,7 +62,6 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
             </button>
           </div>
 
-          {/* Rest of the navbar remains the same */}
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <NavButton label="Home" active={activeSection === "home"} onClick={() => handleNavClick("home")} />
@@ -70,6 +72,11 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
               onClick={() => handleNavClick("whitepaper")}
             />
             <NavButton label="Trade ICM" active={activeSection === "trade"} onClick={() => handleNavClick("trade")} />
+            <NavButton
+              label="Official Links"
+              active={activeSection === "links"}
+              onClick={() => handleNavClick("links")}
+            />
             <NavButton
               label="Community"
               active={activeSection === "community"}
@@ -116,6 +123,11 @@ export default function Navbar({ activeSection, onNavigate }: NavbarProps) {
               onClick={() => handleNavClick("whitepaper")}
             />
             <NavButton label="Trade ICM" active={activeSection === "trade"} onClick={() => handleNavClick("trade")} />
+            <NavButton
+              label="Official Links"
+              active={activeSection === "links"}
+              onClick={() => handleNavClick("links")}
+            />
             <NavButton
               label="Community"
               active={activeSection === "community"}
