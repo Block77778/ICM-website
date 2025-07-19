@@ -1,78 +1,52 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
 import { useWallet } from "@/contexts/wallet-context"
-import { Loader2, LogOut, Wallet, RefreshCw } from "lucide-react"
+import { Wallet, X, Loader2 } from "lucide-react"
 
-export function WalletConnect() {
-  const { connected, walletAddress, connecting, connectWallet, disconnectWallet, balances, refreshBalances } =
-    useWallet()
-  const [isClient, setIsClient] = useState(false)
-  const [refreshing, setRefreshing] = useState(false)
+export default function WalletConnect() {
+  const { isConnected, isConnecting, walletAddress, connect, disconnect } = useWallet()
 
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
-  const handleRefresh = async () => {
-    setRefreshing(true)
-    try {
-      await refreshBalances()
-    } catch (error) {
-      console.error("Error refreshing balances:", error)
-    } finally {
-      setRefreshing(false)
-    }
-  }
-
-  if (!isClient) {
+  if (isConnecting) {
     return (
-      <Button variant="outline" size="sm" disabled>
-        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-        Loading...
-      </Button>
+      <button
+        disabled
+        className="hidden md:flex items-center px-3 py-1.5 text-xs bg-[#2F80ED]/20 rounded-lg text-[#56CCF2] cursor-not-allowed"
+      >
+        <Loader2 className="animate-spin mr-1" size={12} />
+        <span className="hidden sm:inline">Connecting...</span>
+        <span className="sm:hidden">...</span>
+      </button>
     )
   }
 
-  if (connected && walletAddress) {
+  if (isConnected && walletAddress) {
     return (
-      <div className="flex items-center gap-2">
-        <div className="hidden md:flex items-center gap-2 mr-2">
-          <span className="text-sm font-medium">
-            {balances?.SOL !== undefined ? balances.SOL.toFixed(4) : "0.0000"} SOL
-          </span>
-          <button
-            onClick={handleRefresh}
-            disabled={refreshing}
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <RefreshCw className={`h-3 w-3 ${refreshing ? "animate-spin" : ""}`} />
-          </button>
+      <div className="flex items-center">
+        <div className="hidden md:flex items-center px-3 py-1.5 text-xs bg-[#2F80ED]/20 rounded-lg text-[#56CCF2] mr-2">
+          <Wallet className="mr-1" size={12} />
+          <span className="hidden lg:inline">{`${walletAddress.slice(0, 4)}...${walletAddress.slice(-4)}`}</span>
+          <span className="lg:hidden">{`${walletAddress.slice(0, 3)}...`}</span>
         </div>
-        <Button variant="outline" size="sm" onClick={disconnectWallet} className="flex items-center gap-2">
-          <span className="text-xs md:text-sm">{walletAddress}</span>
-          <LogOut className="h-4 w-4" />
-        </Button>
+        <button
+          onClick={disconnect}
+          className="px-2 py-1 text-xs bg-red-500/20 rounded-lg text-red-400 hover:bg-red-500/30 transition-colors md:flex items-center"
+          title="Disconnect wallet"
+        >
+          <X size={10} className="md:hidden" />
+          <span className="hidden md:inline">Disconnect</span>
+        </button>
       </div>
     )
   }
 
   return (
-    <Button variant="outline" size="sm" onClick={connectWallet} disabled={connecting}>
-      {connecting ? (
-        <>
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Connecting...
-        </>
-      ) : (
-        <>
-          <Wallet className="mr-2 h-4 w-4" />
-          Connect Wallet
-        </>
-      )}
-    </Button>
+    <button
+      onClick={connect}
+      className="px-3 py-1.5 text-xs bg-gradient-to-r from-[#2F80ED] to-[#56CCF2] rounded-lg font-medium text-white hover:opacity-90 transition-all flex items-center"
+    >
+      <Wallet className="mr-1" size={12} />
+      <span className="hidden sm:inline">Connect</span>
+      <span className="sm:hidden">Connect</span>
+    </button>
   )
 }
-
-export default WalletConnect
