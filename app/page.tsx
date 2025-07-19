@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { Diamond, ChevronRight, ExternalLink, FileText } from "lucide-react"
@@ -11,6 +10,7 @@ import StatsCounter from "@/components/stats-counter"
 import FeatureCard from "@/components/feature-card"
 import AdvancedTradingWidget from "@/components/advanced-trading-widget"
 import ContactSection from "@/components/contact-section"
+import OfficialLinks from "@/components/official-links"
 
 export default function Home() {
   // References to sections for navigation
@@ -19,6 +19,7 @@ export default function Home() {
   const tradeRef = useRef<HTMLElement>(null)
   const communityRef = useRef<HTMLElement>(null)
   const contactRef = useRef<HTMLElement>(null)
+  const linksRef = useRef<HTMLElement>(null)
 
   // State to track active section
   const [activeSection, setActiveSection] = useState("home")
@@ -38,6 +39,8 @@ export default function Home() {
       // Check which section is in view
       if (contactRef.current && scrollPosition >= contactRef.current.offsetTop) {
         setActiveSection("contact")
+      } else if (linksRef.current && scrollPosition >= linksRef.current.offsetTop) {
+        setActiveSection("links")
       } else if (communityRef.current && scrollPosition >= communityRef.current.offsetTop) {
         setActiveSection("community")
       } else if (whitepaperRef.current && scrollPosition >= whitepaperRef.current.offsetTop) {
@@ -55,7 +58,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const logoPath = "/images/icm-logo.png" // Replace with actual logo path
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden relative">
       <AnimatedBackground />
@@ -68,19 +70,21 @@ export default function Home() {
             trade: () => scrollToSection(tradeRef),
             community: () => scrollToSection(communityRef),
             contact: () => scrollToSection(contactRef),
+            links: () => scrollToSection(linksRef),
           }}
         />
 
         {/* Hero Section */}
         <section className="container mx-auto px-4 pt-20 pb-16 flex flex-col items-center justify-center text-center">
-          {/* Fixed logo implementation */}
+          {/* Updated logo implementation */}
           <div className="mb-8">
-            <img
+            <Image
               src="/images/icm-logo.png"
               alt="ICM Logo"
               width={224}
               height={224}
               className="w-40 h-40 md:w-56 md:h-56 object-contain"
+              priority
             />
           </div>
 
@@ -128,8 +132,6 @@ export default function Home() {
               Trade IceMelon (ICM)
             </span>
           </h2>
-
-          {/* Token address removed as requested */}
 
           {/* Trading Interface */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
@@ -336,10 +338,13 @@ export default function Home() {
               <div className="bg-black/40 p-6 rounded-xl mb-8">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="md:w-1/2">
-                    <img
+                    <Image
                       src="/images/whitepaper-preview.jpeg"
                       alt="IceMelon Whitepaper Preview"
+                      width={400}
+                      height={600}
                       className="w-full h-auto rounded-lg shadow-lg border border-[#2F80ED]/30"
+                      priority
                     />
                   </div>
                   <div className="md:w-1/2">
@@ -369,6 +374,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Official Links Section */}
+        <section ref={linksRef} id="links" className="container mx-auto px-4 py-24">
+          <OfficialLinks />
+        </section>
+
         {/* Community Section */}
         <section ref={communityRef} id="community" className="relative py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#2F80ED]/10 to-[#56CCF2]/10 backdrop-blur-sm z-0"></div>
@@ -381,7 +391,7 @@ export default function Home() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
                 <a
-                  href="https://www.facebook.com/share/18puXHchzU/?mibextid=wwXIfr"
+                  href="https://facebook.com/share/18puXHchzU"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-gradient-to-r from-[#ADFF2F] to-[#4ECDC4] rounded-lg font-bold text-black hover:opacity-90 transition-all"
@@ -397,7 +407,7 @@ export default function Home() {
                   Gecko Terminal
                 </a>
                 <a
-                  href="https://t.me/+r5F9-F-BvmFjNjY0"
+                  href="https://t.me/IcemelonOfficial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-transparent border-2 border-[#56CCF2] rounded-lg font-bold hover:bg-[#56CCF2]/10 transition-all"
@@ -405,7 +415,7 @@ export default function Home() {
                   Join Telegram Group
                 </a>
                 <a
-                  href="https://x.com/icmcrypto__?s=21"
+                  href="https://x.com/icmcrypto__"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-transparent border-2 border-[#56CCF2] rounded-lg font-bold hover:bg-[#56CCF2]/10 transition-all"
@@ -503,6 +513,12 @@ export default function Home() {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Trade
+                </button>
+                <button
+                  onClick={() => scrollToSection(linksRef)}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Official Links
                 </button>
                 <button
                   onClick={() => scrollToSection(communityRef)}
